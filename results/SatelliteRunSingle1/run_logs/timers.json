@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1713845646",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "D:\\UTAustin\\Reinforcement Learning\\RL_Tutorial_Unity\\RL Tutorial\\MLvenv\\Scripts\\mlagents-learn --run-id SatelliteRunSingle1",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.2+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1713845676"
+    },
+    "total": 29.3181774,
+    "count": 1,
+    "self": 0.004274899999998638,
+    "children": {
+        "run_training.setup": {
+            "total": 0.07277840000000002,
+            "count": 1,
+            "self": 0.07277840000000002
+        },
+        "TrainerController.start_learning": {
+            "total": 29.2411241,
+            "count": 1,
+            "self": 0.00039199999999794954,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 29.2407167,
+                    "count": 1,
+                    "self": 29.2407167
+                },
+                "trainer_threads": {
+                    "total": 5.999999999062311e-07,
+                    "count": 1,
+                    "self": 5.999999999062311e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 1.4800000002423985e-05,
+                    "count": 1,
+                    "self": 1.4800000002423985e-05
+                }
+            }
+        }
+    }
+}
