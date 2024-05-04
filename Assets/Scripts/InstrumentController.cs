@@ -146,20 +146,21 @@ public class InstrumentController : Agent
         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
 
-        float reward = lastDistance - error;
+        float reward = - 1f;
+        AddReward(reward);
         
         // Easy to see if agent moving in right direction by printing these results
         //print(reward);
         //print(error);
 
-        // Amplify negative rewards 
-        if (reward < 0)
-        {
-            AddReward(10.0f*reward);
-        }
-        else
-        {
-            AddReward(reward);
-        }
+        // Amplify negative rewards  honestly lets not do this, makes the whole thing harder
+        // if (reward < 0)
+        // {
+        //     AddReward(10.0f*reward);
+        // }
+        // else
+        // {
+        //     AddReward(reward);
+        // }
     }
 }

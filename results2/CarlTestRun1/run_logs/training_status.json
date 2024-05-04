@@ -2,49 +2,58 @@
     "My Behavior": {
         "checkpoints": [
             {
-                "steps": 499968,
-                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-499968.onnx",
+                "steps": 7499988,
+                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-7499988.onnx",
                 "reward": null,
-                "creation_time": 1714816691.1262364,
+                "creation_time": 1714821779.368229,
                 "auxillary_file_paths": [
-                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-499968.pt"
+                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-7499988.pt"
                 ]
             },
             {
-                "steps": 999936,
-                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-999936.onnx",
+                "steps": 7999956,
+                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-7999956.onnx",
                 "reward": null,
-                "creation_time": 1714816823.4348042,
+                "creation_time": 1714822152.6974964,
                 "auxillary_file_paths": [
-                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-999936.pt"
+                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-7999956.pt"
                 ]
             },
             {
-                "steps": 1499968,
-                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-1499968.onnx",
-                "reward": null,
-                "creation_time": 1714816958.5785124,
+                "steps": 8499950,
+                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-8499950.onnx",
+                "reward": -91.12013059854507,
+                "creation_time": 1714822591.9324582,
                 "auxillary_file_paths": [
-                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-1499968.pt"
+                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-8499950.pt"
                 ]
             },
             {
-                "steps": 1700352,
-                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-1700352.onnx",
+                "steps": 8999955,
+                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-8999955.onnx",
                 "reward": null,
-                "creation_time": 1714817138.0118153,
+                "creation_time": 1714823036.5234077,
                 "auxillary_file_paths": [
-                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-1700352.pt"
+                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-8999955.pt"
+                ]
+            },
+            {
+                "steps": 9070761,
+                "file_path": "results2\\CarlTestRun1\\My Behavior\\My Behavior-9070761.onnx",
+                "reward": null,
+                "creation_time": 1714823144.8700907,
+                "auxillary_file_paths": [
+                    "results2\\CarlTestRun1\\My Behavior\\My Behavior-9070761.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1700352,
+            "steps": 9070761,
             "file_path": "results2\\CarlTestRun1\\My Behavior.onnx",
             "reward": null,
-            "creation_time": 1714817138.0118153,
+            "creation_time": 1714823144.8700907,
             "auxillary_file_paths": [
-                "results2\\CarlTestRun1\\My Behavior\\My Behavior-1700352.pt"
+                "results2\\CarlTestRun1\\My Behavior\\My Behavior-9070761.pt"
             ]
         }
     },
