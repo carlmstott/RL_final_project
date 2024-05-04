@@ -95,3 +95,5 @@ set up other algorithm types besides PPO
 make sure theres a way to run trained models (just evaluation) DONE, put .onyx file into the "model" input in the 
 ppo, sac
 add a way to calculate a good center of mass DONE
+
+episode length is controlled by maxsteps variable in the controller script,

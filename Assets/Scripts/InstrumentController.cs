@@ -37,9 +37,9 @@ public class InstrumentController : Agent
         float width = arenaSize.size.x;
         float length = arenaSize.size.z;
         //lets do -9.5 to 9.5 for possible spawn range, should insure that instruments are always on the satellite
-        float minx = -width/2 - .5f;
+        float minx = -width/2 + .5f;
         float maxx = width/2  - .5f; //the .5f's make sure no cubes fall off
-        float minz = -length/2  - .5f;
+        float minz = -length/2  + .5f;
         float maxz = length/2  - .5f;
         
 
@@ -71,6 +71,7 @@ public class InstrumentController : Agent
     {
         // Seeing if episode should end by max step count
         stepCount++;
+        print(stepCount);
         if (stepCount >= maxSteps)
         {
             stepCount = 0;
@@ -82,7 +83,7 @@ public class InstrumentController : Agent
         Rigidbody rb_instrument2 = instrument2.GetComponent<Rigidbody>();
         Rigidbody rb_instrument3 = instrument3.GetComponent<Rigidbody>();
         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
-        centerOfMassIndicator.transform.position = COM;
+       // centerOfMassIndicator.transform.position = COM;
 
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
         if (error < tol)
