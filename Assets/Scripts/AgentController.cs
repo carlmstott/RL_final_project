@@ -19,7 +19,7 @@ public class AgentController : Agent
         transform.localPosition = new UnityEngine.Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
 
         // Pellet
-        target.localPosition = new UnityEngine.Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
+        target.localPosition = new UnityEngine.Vector3(0f, 0.3f, 0f);
     }
 
     public override void CollectObservations(VectorSensor sensor)

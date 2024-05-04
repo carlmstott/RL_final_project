@@ -13,6 +13,8 @@ public class InstrumentController : Agent
     public GameObject instrument1;
     public GameObject instrument2;
     public GameObject instrument3;
+    public GameObject centerOfMassIndicator;
+
 
     public GameObject targetCOM;
 
@@ -29,10 +31,22 @@ public class InstrumentController : Agent
 
     public override void OnEpisodeBegin()
     {
-        // Hardcoded starting positions of instruments
-        instrument1.transform.localPosition = new UnityEngine.Vector3(-2f, 3.2f, 2f);
-        instrument2.transform.localPosition = new UnityEngine.Vector3(2f, 3.2f, 2f);
-        instrument3.transform.localPosition = new UnityEngine.Vector3(1f, 3.2f, 2f);
+        GameObject satelliteBody = GameObject.Find("SatelliteBody");
+        Renderer SatelliteBodyRenderer = satelliteBody.GetComponent<Renderer>();
+        Bounds arenaSize = SatelliteBodyRenderer.bounds;
+        float width = arenaSize.size.x;
+        float length = arenaSize.size.z;
+        //lets do -9.5 to 9.5 for possible spawn range, should insure that instruments are always on the satellite
+        float minx = -width/2;
+        float maxx = width/2;
+        float minz = -length/2;
+        float maxz = length/2;
+        
+
+        // lets randomize the position of instuments each episode start
+        instrument1.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), 3.2f, Random.Range(minz, maxz));
+        instrument2.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), 3.2f, Random.Range(minz, maxz));
+        instrument3.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), 3.2f, Random.Range(minz, maxz));
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -68,6 +82,8 @@ public class InstrumentController : Agent
         Rigidbody rb_instrument2 = instrument2.GetComponent<Rigidbody>();
         Rigidbody rb_instrument3 = instrument3.GetComponent<Rigidbody>();
         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
+        centerOfMassIndicator.transform.position = COM;
+
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
         if (error < tol)
         {
