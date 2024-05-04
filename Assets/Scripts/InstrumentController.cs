@@ -37,10 +37,10 @@ public class InstrumentController : Agent
         float width = arenaSize.size.x;
         float length = arenaSize.size.z;
         //lets do -9.5 to 9.5 for possible spawn range, should insure that instruments are always on the satellite
-        float minx = -width/2;
-        float maxx = width/2;
-        float minz = -length/2;
-        float maxz = length/2;
+        float minx = -width/2 - .5f;
+        float maxx = width/2  - .5f; //the .5f's make sure no cubes fall off
+        float minz = -length/2  - .5f;
+        float maxz = length/2  - .5f;
         
 
         // lets randomize the position of instuments each episode start

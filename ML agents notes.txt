@@ -93,5 +93,5 @@ add way to log average reward DONE, use tensorboard: https://unity-technologies.
 make sure randomization works DONE
 set up other algorithm types besides PPO
 make sure theres a way to run trained models (just evaluation) DONE, put .onyx file into the "model" input in the 
-ppo, dqn, sac
+ppo, sac
 add a way to calculate a good center of mass DONE
