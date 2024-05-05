@@ -11,7 +11,7 @@ Python = 3.9.13
 
 To setup training environment:
 Inside the Unity project folder, create a Python virtual environment. Install the following packages:
-- mlagents
+- mlagents==-.30.0
 - torch, torchvision, torchaudio
 - protobuf version==3.20.3 (this will be automatically installed as the wrong version above)
 - tensorboard
