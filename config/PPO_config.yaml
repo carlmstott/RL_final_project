@@ -16,8 +16,8 @@ behaviors:
       learning_rate_schedule: constant  # This ensures the learning rate does not decrease
     network_settings:
       normalize: true  # Normalizing is always a good idea
-      hidden_units: 64
-      num_layers: 1
+      hidden_units: 8
+      num_layers: 2
       deterministic: false
     reward_signals:
       extrinsic:

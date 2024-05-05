@@ -63,7 +63,7 @@
 //         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
 //         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
 
-//         sensor.AddObservation(COM);
+//        // sensor.AddObservation(COM);
 //         sensor.AddObservation(error);
 //     }
 
