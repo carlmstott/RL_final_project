@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 public class InstrumentController : Agent
 {
-    [SerializeField] private float moveDistance = .001f;
+    [SerializeField] private float moveDistance = .01f;
 
     // Better way to link many objects?
     public GameObject instrument1;
@@ -26,7 +26,7 @@ public class InstrumentController : Agent
     private float lastDistance;
 
     private int stepCount = 0;
-    public int SimSteps = 1000;
+    public int SimSteps = 10000;
     public float tol = 0.5f;
 
     public override void OnEpisodeBegin()
@@ -37,25 +37,25 @@ public class InstrumentController : Agent
         float width = arenaSize.size.x;
         float length = arenaSize.size.z;
         //lets do -9.5 to 9.5 for possible spawn range, should insure that instruments are always on the satellite
-        float minx = -width/2 + .5f;
-        float maxx = width/2  - .5f; //the .5f's make sure no cubes fall off
-        float minz = -length/2  + .5f;
-        float maxz = length/2  - .5f;
+        float minx = -width/2 + 1f;
+        float maxx = width/2  - 1f; //the .5f's make sure no cubes fall off
+        float minz = -length/2  + 1f;
+        float maxz = length/2  - 1f;
         
 
         // lets randomize the position of instuments each episode start
-        instrument1.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), 3.2f, Random.Range(minz, maxz));
-        instrument2.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), 3.2f, Random.Range(minz, maxz));
-        instrument3.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), 3.2f, Random.Range(minz, maxz));
+        instrument1.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), .5f, Random.Range(minz, maxz));
+        instrument2.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), .5f, Random.Range(minz, maxz));
+        instrument3.transform.localPosition = new UnityEngine.Vector3(Random.Range(minx, maxx), .5f, Random.Range(minz, maxz));
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        // sensor.AddObservation(instrument1.transform.position);
-        // sensor.AddObservation(instrument2.transform.position);
-        // sensor.AddObservation(instrument3.transform.position);
+        sensor.AddObservation(instrument1.transform.position);
+        sensor.AddObservation(instrument2.transform.position);
+        sensor.AddObservation(instrument3.transform.position);
 
-        //sensor.AddObservation(targetCOM.transform.position);
+        sensor.AddObservation(targetCOM.transform.position);
 
         Rigidbody rb_instrument1 = instrument1.GetComponent<Rigidbody>();
         Rigidbody rb_instrument2 = instrument2.GetComponent<Rigidbody>();
@@ -63,7 +63,7 @@ public class InstrumentController : Agent
         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
 
-        // sensor.AddObservation(COM);
+       // sensor.AddObservation(COM);
         sensor.AddObservation(error);
     }
 
@@ -71,6 +71,7 @@ public class InstrumentController : Agent
     {
         // Seeing if episode should end by max step count
         stepCount++;
+        AddReward(-.01f);
         // print(stepCount);
         if (stepCount >= SimSteps)
         {
@@ -138,6 +139,7 @@ public class InstrumentController : Agent
 
     private void FixedUpdate()
     {
+        Time.timeScale = 80.0f;
         CalculateReward();
     }
 
@@ -149,14 +151,13 @@ public class InstrumentController : Agent
         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
 
-        float reward = 0f;
-        AddReward(reward);
+        float reward = lastDistance - error;
         
         // Easy to see if agent moving in right direction by printing these results
         //print(reward);
         //print(error);
 
-        // Amplify negative rewards  honestly lets not do this, makes the whole thing harder
+        // Amplify negative rewards 
         // if (reward < 0)
         // {
         //     AddReward(10.0f*reward);

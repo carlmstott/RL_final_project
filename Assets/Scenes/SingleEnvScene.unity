@@ -222,11 +222,11 @@ Transform:
   m_GameObject: {fileID: 462120449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5952921, y: -10.006975, z: -2.3330112}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.67427397, y: -7.120584, z: -2.2373528}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1782370747}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -431,6 +431,14 @@ PrefabInstance:
       value: EnvSatellite
       objectReference: {fileID: 0}
     - target: {fileID: 6531490079239406423, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
+      propertyPath: SimSteps
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531490079239406423, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
+      propertyPath: moveDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531490079239406423, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
       propertyPath: centerOfMassIndicator
       value: 
       objectReference: {fileID: 462120449}
@@ -477,20 +485,20 @@ PrefabInstance:
     - target: {fileID: 7846460102163954655, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 152582c522d4aaf418e9d49f7c47bd20, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 4cf083c605a88714b8d845a5f500af6a, type: 3}
+    - target: {fileID: 7846460102163954655, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
+      propertyPath: m_BehaviorType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846460102163954655, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7325189857431694159, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 462120453}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
---- !u!4 &1782370747 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7325189857431694159, guid: 7946a283b587b26418dd50dac8effabc, type: 3}
-  m_PrefabInstance: {fileID: 1367708574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -498,3 +506,4 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1367708574}
+  - {fileID: 462120453}

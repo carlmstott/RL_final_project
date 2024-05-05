@@ -1,0 +1,65 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 10499947,
+                "file_path": "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-10499947.onnx",
+                "reward": 1.0,
+                "creation_time": 1714882761.6859522,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-10499947.pt"
+                ]
+            },
+            {
+                "steps": 10553797,
+                "file_path": "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-10553797.onnx",
+                "reward": null,
+                "creation_time": 1714882807.1757345,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-10553797.pt"
+                ]
+            },
+            {
+                "steps": 10999963,
+                "file_path": "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-10999963.onnx",
+                "reward": 1.0,
+                "creation_time": 1714883123.0346756,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-10999963.pt"
+                ]
+            },
+            {
+                "steps": 11167169,
+                "file_path": "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-11167169.onnx",
+                "reward": 0.05263157894736842,
+                "creation_time": 1714883281.1464982,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-11167169.pt"
+                ]
+            },
+            {
+                "steps": 11186425,
+                "file_path": "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-11186425.onnx",
+                "reward": 0.0,
+                "creation_time": 1714884026.39149,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-11186425.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 11186425,
+            "file_path": "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior.onnx",
+            "reward": 0.0,
+            "creation_time": 1714884026.39149,
+            "auxillary_file_paths": [
+                "results2\\NewMinPPO2RunErrorAndCOMposeObs\\My Behavior\\My Behavior-11186425.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}

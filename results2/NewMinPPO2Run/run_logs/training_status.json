@@ -1,0 +1,65 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 3499995,
+                "file_path": "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-3499995.onnx",
+                "reward": null,
+                "creation_time": 1714878033.3625507,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-3499995.pt"
+                ]
+            },
+            {
+                "steps": 3999944,
+                "file_path": "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-3999944.onnx",
+                "reward": null,
+                "creation_time": 1714878152.929527,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-3999944.pt"
+                ]
+            },
+            {
+                "steps": 4499981,
+                "file_path": "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-4499981.onnx",
+                "reward": 1.0,
+                "creation_time": 1714878267.5169818,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-4499981.pt"
+                ]
+            },
+            {
+                "steps": 4999992,
+                "file_path": "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-4999992.onnx",
+                "reward": 1.0,
+                "creation_time": 1714878386.2724335,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-4999992.pt"
+                ]
+            },
+            {
+                "steps": 5248605,
+                "file_path": "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-5248605.onnx",
+                "reward": null,
+                "creation_time": 1714878510.416499,
+                "auxillary_file_paths": [
+                    "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-5248605.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5248605,
+            "file_path": "results2\\NewMinPPO2Run\\My Behavior.onnx",
+            "reward": null,
+            "creation_time": 1714878510.416499,
+            "auxillary_file_paths": [
+                "results2\\NewMinPPO2Run\\My Behavior\\My Behavior-5248605.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}

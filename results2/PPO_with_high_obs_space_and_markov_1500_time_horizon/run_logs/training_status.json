@@ -1,0 +1,65 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 499991,
+                "file_path": "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-499991.onnx",
+                "reward": -14.70249818265438,
+                "creation_time": 1714896787.4071214,
+                "auxillary_file_paths": [
+                    "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-499991.pt"
+                ]
+            },
+            {
+                "steps": 999949,
+                "file_path": "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-999949.onnx",
+                "reward": null,
+                "creation_time": 1714896966.92659,
+                "auxillary_file_paths": [
+                    "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-999949.pt"
+                ]
+            },
+            {
+                "steps": 1499938,
+                "file_path": "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-1499938.onnx",
+                "reward": -7.2799990219729285,
+                "creation_time": 1714897142.4921472,
+                "auxillary_file_paths": [
+                    "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-1499938.pt"
+                ]
+            },
+            {
+                "steps": 1999993,
+                "file_path": "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-1999993.onnx",
+                "reward": -4.700554892420769,
+                "creation_time": 1714897318.433863,
+                "auxillary_file_paths": [
+                    "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-1999993.pt"
+                ]
+            },
+            {
+                "steps": 2415440,
+                "file_path": "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-2415440.onnx",
+                "reward": -1.393636088479649,
+                "creation_time": 1714897465.670759,
+                "auxillary_file_paths": [
+                    "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-2415440.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2415440,
+            "file_path": "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior.onnx",
+            "reward": -1.393636088479649,
+            "creation_time": 1714897465.670759,
+            "auxillary_file_paths": [
+                "results2\\PPO_with_high_obs_space_and_markov_1500_time_horizon\\My Behavior\\My Behavior-2415440.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}

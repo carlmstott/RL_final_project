@@ -1,0 +1,65 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 8999993,
+                "file_path": "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-8999993.onnx",
+                "reward": 0.0,
+                "creation_time": 1714892335.3196173,
+                "auxillary_file_paths": [
+                    "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-8999993.pt"
+                ]
+            },
+            {
+                "steps": 9499955,
+                "file_path": "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-9499955.onnx",
+                "reward": null,
+                "creation_time": 1714892452.5846925,
+                "auxillary_file_paths": [
+                    "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-9499955.pt"
+                ]
+            },
+            {
+                "steps": 9999993,
+                "file_path": "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-9999993.onnx",
+                "reward": 1.0,
+                "creation_time": 1714892584.4247084,
+                "auxillary_file_paths": [
+                    "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-9999993.pt"
+                ]
+            },
+            {
+                "steps": 10499937,
+                "file_path": "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-10499937.onnx",
+                "reward": 1.0,
+                "creation_time": 1714892708.6875472,
+                "auxillary_file_paths": [
+                    "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-10499937.pt"
+                ]
+            },
+            {
+                "steps": 10952963,
+                "file_path": "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-10952963.onnx",
+                "reward": null,
+                "creation_time": 1714892827.2170668,
+                "auxillary_file_paths": [
+                    "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-10952963.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10952963,
+            "file_path": "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior.onnx",
+            "reward": null,
+            "creation_time": 1714892827.2170668,
+            "auxillary_file_paths": [
+                "results2\\FinalBasicTryLargeActApproxAndBigMove\\My Behavior\\My Behavior-10952963.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.0+cpu"
+    }
+}
