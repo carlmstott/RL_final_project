@@ -13,6 +13,7 @@ behaviors:
       shared_critic: true  # Internet says that this is a good idea
       epsilon_schedule: constant  # Ensuring epsilon remains constant
       beta_schedule: constant     # Ensuring beta remains constant
+      learning_rate_schedule: constant  # This ensures the learning rate does not decrease
     network_settings:
       normalize: true  # Normalizing is always a good idea
       hidden_units: 64
@@ -25,22 +26,22 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 50000000
+    max_steps: 60000000
     time_horizon: 64
     summary_freq: 50000
     threaded: false
     self_play: null
     behavioral_cloning: null
 engine_settings:
-   no_graphics: false  # Changed to true, we don't need this thing to see
+   no_graphics: false  # Set to true for headless mode
 environment_parameters: null
 checkpoint_settings:
-  run_id: PPO_edited_minimal
-  initialize_from: null
-  load_model: false
-  resume: false
+  run_id: NewTrainingSession  # New run ID for this session
+  initialize_from: PPO_edited_minimal  # Previous run ID to continue training from
+  load_model: true  # Must be true to load the previous model
+  resume: true  # Set to true to continue from the last checkpoint
   force: false
-  train_model: false
+  train_model: true  # Set to true to enable training
   inference: false
   results_dir: results2
 torch_settings:

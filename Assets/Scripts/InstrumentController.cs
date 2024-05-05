@@ -26,7 +26,7 @@ public class InstrumentController : Agent
     private float lastDistance;
 
     private int stepCount = 0;
-    public int maxSteps = 100000;
+    public int SimSteps = 1000;
     public float tol = 0.5f;
 
     public override void OnEpisodeBegin()
@@ -71,11 +71,13 @@ public class InstrumentController : Agent
     {
         // Seeing if episode should end by max step count
         stepCount++;
-        print(stepCount);
-        if (stepCount >= maxSteps)
+        // print(stepCount);
+        if (stepCount >= SimSteps)
         {
             stepCount = 0;
             EndEpisode();
+            stepCount = 0;
+            print("Episode Ended by Step Count");
         }
 
         // Seeing if episode should end by successful task completion
@@ -88,8 +90,9 @@ public class InstrumentController : Agent
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
         if (error < tol)
         {
-            AddReward(100.0f);
+            AddReward(1.0f);
             EndEpisode();
+            print("Episode Ended by Success");
         }
 
         // Tracking prev locations
@@ -146,7 +149,7 @@ public class InstrumentController : Agent
         UnityEngine.Vector3 COM = (rb_instrument1.mass * instrument1.transform.position + rb_instrument2.mass * instrument2.transform.position + rb_instrument3.mass * instrument3.transform.position) / (rb_instrument1.mass + rb_instrument2.mass+ rb_instrument3.mass);
         float error = UnityEngine.Vector3.Distance(COM, targetCOM.transform.position);
 
-        float reward = - 1f;
+        float reward = 0f;
         AddReward(reward);
         
         // Easy to see if agent moving in right direction by printing these results

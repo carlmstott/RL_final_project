@@ -11,9 +11,9 @@ behaviors:
       lambd: 0.95
       num_epoch: 1
       shared_critic: true
-      learning_rate_schedule: linear
-      beta_schedule: linear
-      epsilon_schedule: linear
+      learning_rate_schedule: constant
+      beta_schedule: constant
+      epsilon_schedule: constant
     network_settings:
       normalize: true
       hidden_units: 64
@@ -37,7 +37,7 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 50000000
+    max_steps: 60000000
     time_horizon: 64
     summary_freq: 50000
     threaded: false
@@ -65,10 +65,10 @@ environment_parameters: null
 checkpoint_settings:
   run_id: CarlTestRun2
   initialize_from: null
-  load_model: false
-  resume: false
+  load_model: true
+  resume: true
   force: false
-  train_model: false
+  train_model: true
   inference: false
   results_dir: results2
 torch_settings:

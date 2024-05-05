@@ -96,4 +96,16 @@ make sure theres a way to run trained models (just evaluation) DONE, put .onyx f
 ppo, sac
 add a way to calculate a good center of mass DONE
 
-episode length is controlled by maxsteps variable in the controller script,
+episode length is controlled by maxsteps variable in the controller script, the endEpisode() method, 
+
+
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 2.3.0+cpu
+[WARNING] The --load option has been deprecated. Please use the --resume option instead.
+[WARNING] The --train option has been deprecated. Train mode is now the default. Use --inference to run in inference mode.
+C:\Users\carlm\RL_fp_master_folder\RL_Final_project\MLvenv\lib\site-packages\torch\__init__.py:747: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:433.)
+  _C._set_default_tensor_type(t)
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
